@@ -1,0 +1,20 @@
+{
+  "name": "bendu-cole",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weedor-b-cole-247/Bendu-Cole.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weedor-b-cole-247/Bendu-Cole/issues"
+  },
+  "homepage": "https://github.com/weedor-b-cole-247/Bendu-Cole#readme",
+  "description": ""
+}

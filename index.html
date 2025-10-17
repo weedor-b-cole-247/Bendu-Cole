@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weeder B. Cole | HR Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind - UPDATED FEMININE COLOR PALETTE -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Refined Feminine Palette
+                        'hr-primary': '#5D3B6A', // Deep Plum/Berry (Main professional base color)
+                        'hr-secondary': '#E3D5E6', // Soft Lavender (Muted secondary background/subtle tone)
+                        'hr-accent': '#F7A9B8', // Dusty Rose Pink (Elegant accent color - unchanged)
+                        'hr-bg-light': '#F7F9FB', // Light gray/off-white background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scroll behavior for smooth navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the fixed header */
+        .header-fixed {
+            /* Background color matches the new Deep Plum */
+            background-color: rgba(93, 59, 106, 0.95); 
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+     <!-- FAVICON LINK: -->
+     <link href="/favicon.ico" rel="icon">
+    <!-- END FAVICON LINKS -->
+    <!-- Load Inter font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+</head>
+<body class="bg-hr-bg-light font-sans text-gray-800">
+
+    <!-- Sticky Header/Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <!-- Logo: SVG Icon + Text -->
+            <a href="#home" class="flex items-center space-x-2 text-white group">
+                <!-- Stylized Human Resources Icon (Represents Profile/People Management) in accent color -->
+                <svg class="w-7 h-7 fill-current text-hr-accent transition duration-300 group-hover:text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span class="text-2xl font-extrabold tracking-wider transition duration-300 group-hover:text-hr-accent">WBC.HR</span>
+            </a>
+            <!-- END NEW LOGO -->
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-white hover:text-hr-accent transition duration-300 font-medium">About</a>
+                <a href="#skills" class="text-white hover:text-hr-accent transition duration-300 font-medium">Skills</a>
+                <a href="#education" class="text-white hover:text-hr-accent transition duration-300 font-medium">Education</a>
+                <a href="#projects" class="text-white hover:text-hr-accent transition duration-300 font-medium">Experience</a>
+                <a href="#gallery" class="text-white hover:text-hr-accent transition duration-300 font-medium">Gallery</a> <!-- ADDED GALLERY LINK -->
+                <a href="#contact" class="text-white hover:text-hr-accent transition duration-300 font-medium">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-hr-primary/95">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Skills</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Education</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Experience</a>
+                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Gallery</a> <!-- ADDED GALLERY LINK -->
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="bg-hr-primary text-white pt-32 pb-24 md:pt-48 md:pb-36">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Profile Picture Placeholder -->
+            <img src="./Public/Image/bendu cole pf.jpg" 
+                 alt="Weeder B. Cole Profile Photo" 
+                 class="w-40 h-40 rounded-full mx-auto mb-8 object-cover border-4 border-white shadow-xl transform transition duration-500 hover:scale-105"
+            >
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fadeIn">
+                Weeder B. Cole
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8 text-hr-accent">
+                Aspiring Human Resource Professional
+            </p>
+            <p id="about" class="max-w-3xl mx-auto text-lg leading-relaxed">
+                A dedicated and aspiring Human Resource professional with a strong foundation in HR principles, seeking to contribute to organizational success through effective employee engagement, process optimization, and strategic support. Committed to fostering a positive workplace culture and continuous improvement.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. Skills Section -->
+    <section id="skills" class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Core HR Competencies</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Skill Card 1 -->
+                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
+                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Strategic Thinking</h3>
+                    <p class="text-gray-600">Ability to align HR initiatives (like staffing and development) with the broader organizational goals and future needs.</p>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
+                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Analytical Skills</h3>
+                    <p class="text-gray-600">A foundation in collecting, analyzing, and interpreting HR data (e.g., turnover, engagement scores) to drive informed decision-making.</p>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
+                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Communication & Interpersonal</h3>
+                    <p class="text-gray-600">Strong verbal and written communication essential for employee relations, training delivery, and policy clarity.</p>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
+                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Organizational Skills</h3>
+                    <p class="text-gray-600">Proficiency in managing complex documentation, process optimization, and maintaining accurate personnel records.</p>
+                </div>
+                
+                <!-- Skill Card 5 -->
+                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
+                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Leadership & Adaptability</h3>
+                    <p class="text-gray-600">The capacity to lead initiatives, guide team members, and quickly adjust to evolving organizational and market dynamics.</p>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
+                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Technology (Microsoft Suite)</h3>
+                    <p class="text-gray-600">Highly proficient in Microsoft Office Suite for reporting, presentation, and data management tasks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Education Section -->
+    <section id="education" class="py-20 md:py-32 bg-hr-secondary">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Academic Background</h2>
+            
+            <div class="space-y-10">
+                <!-- University -->
+                <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="md:w-1/3 mb-4 md:mb-0">
+                        <p class="text-lg font-bold text-hr-primary">2026/2027 (Expected)</p>
+                    </div>
+                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
+                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">Undergraduate Student</h3>
+                        <p class="text-xl text-hr-primary mb-2">Human Resource Management</p>
+                        <p class="text-gray-600">African Methodist Episcopal University</p>
+                    </div>
+                </div>
+
+                <!-- High School -->
+                <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="md:w-1/3 mb-4 md:mb-0">
+                        <p class="text-lg font-bold text-hr-primary">2021/2022</p>
+                    </div>
+                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
+                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">High School Diploma</h3>
+                        <p class="text-xl text-hr-primary mb-2">Certificate of Honors</p>
+                        <p class="text-gray-600">Royal Christian Foundation Institute</p>
+                    </div>
+                </div>
+
+                <!-- Other Certification -->
+                <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="md:w-1/3 mb-4 md:mb-0">
+                        <p class="text-lg font-bold text-hr-primary">Oct 2019 - Mar 2020</p>
+                    </div>
+                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
+                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">Certificate of Completion</h3>
+                        <p class="text-xl text-hr-primary mb-2">Partnership Participation</p>
+                        <p class="text-gray-600">Higher Life Embassy Foundation School / Church</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4. Experience & Competencies Section -->
+    <section id="projects" class="py-20 md:py-32 bg-hr-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-hr-accent">Professional Experience & HR Competencies</h2>
+            <p class="text-center text-lg max-w-4xl mx-auto mb-12 opacity-90">
+                Combining practical business ownership with conceptual HR case studies showcases strong leadership, business acumen, and applied strategic thinking.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- UPDATED: Entrepreneurial Experience (Hands-on Leadership) -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
+                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Entrepreneur & Founder</h3>
+                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Weedor Quality Human Hairs | Business Strategy & Culture</p>
+                    
+                    <strong class="font-bold">Role:</strong> Self-employed (Jan 2024 - Present) in Monrovia, Liberia.<br>
+                    <ul class="list-disc list-inside ml-4 mt-2 space-y-1 text-gray-700">
+                        <li>Founded and managed all aspects of a small business, demonstrating end-to-end **project management and organizational skills**.</li>
+                        <li>Developed innovative strategies for **customer engagement** and community impact, parallel to external HR communications.</li>
+                        <li>Fostered a culture of **creativity and collaboration** among team members to drive business success and internal motivation.</li>
+                        <li>Engaged in strategic planning, aligning daily operations with long-term vision—a key HR **strategic thinking** function.</li>
+                    </ul>
+                </div>
+                
+                <!-- Project 1: Talent Acquisition & Metrics -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
+                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Reducing Time-to-Hire</h3>
+                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Talent Acquisition & Process Optimization</p>
+                    
+                    <strong class="font-bold">Situation:</strong> A high Time-to-Hire (TTH) was causing critical roles to remain vacant, impacting productivity.<br>
+                    <strong class="font-plan">Action Plan:</strong> Mapped the recruitment process, identified a bottleneck at the interview stage, and proposed a streamlined, three-stage process with standardized assessment rubrics.<br>
+                    <strong class="font-bold">Result:</strong> Projected TTH reduction by **25%** by improving organizational efficiency and applicant experience.
+                </div>
+
+                <!-- Project 2: Performance Management -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
+                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Implementing Continuous Feedback</h3>
+                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Performance Management & Employee Development</p>
+                    
+                    <strong class="font-bold">Situation:</strong> The annual review system was ineffective and disconnected from daily performance and growth.<br>
+                    <strong class="font-bold">Action Plan:</strong> Designed a framework for quarterly 'Check-ins' focusing on career development and provided managers with training on effective coaching and constructive feedback techniques.<br>
+                    <strong class="font-bold">Result:</strong> Fosters a culture of continuous development and **improves goal alignment** across teams.
+                </div>
+                
+                <!-- Project 3: Employee Relations & Retention -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
+                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Stay Interview Initiative</h3>
+                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Employee Engagement & Retention</p>
+                    
+                    <strong class="font-bold">Situation:</strong> Unidentified dissatisfaction was leading to voluntary resignations (high attrition rate).<br>
+                    <strong class="font-bold">Action Plan:</strong> Developed and piloted a "Stay Interview" program to proactively identify what motivates employees to *stay*, focusing on career pathing and recognition.<br>
+                    <strong class="font-bold">Result:</strong> Collects actionable data to inform retention strategies and **builds trust** between management and staff.
+                </div>
+
+                <!-- Project 4: Policy & Compliance -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
+                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Remote Work Policy Drafting</h3>
+                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Policy Development & Legal Compliance</p>
+                    
+                    <strong class="font-bold">Situation:</strong> Need for a clear, legally compliant policy to govern flexible/remote work post-pandemic.<br>
+                    <strong class="font-bold">Action Plan:</strong> Researched legal mandates and industry best practices to draft a comprehensive policy addressing eligibility, security, and communication standards.<br>
+                    <strong class="font-bold">Result:</strong> Provides clarity to all employees, ensuring **legal compliance** while supporting work-life balance.
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- 5. Gallery Section (NEW) -->
+    <section id="gallery" class="py-20 md:py-32 bg-hr-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Visual Gallery & Highlights</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                    <!-- Image 1 (Entrepreneur & Founder Logo) - Now a clickable link -->
+                <a href="https://web.facebook.com/people/Weedor-Quality-Human-Hairs/100070183251625/?sk=about" target="_blank" class="block rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white group">
+                    <img src="./Public/Image/logo.jpg" alt="Weedor Quality Human Hairs Logo" 
+                         class="w-full h-80 object-cover" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x480/5D3B6A/F7A9B8?text=Weedor+Quality+Human+Hairs';" 
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm group-hover:bg-hr-accent group-hover:text-white transition duration-300">Entrepreneur & Founder</p>
+                </a>
+
+
+                <!-- Image 2 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="./Public/Image/bendu cole 5.jpg" 
+                         alt="Leadership Event" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Leadership Event</p>
+                </div>
+                
+                <!-- Image 3 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="./Public/Image/bendu cole 8.jpg" 
+                         alt="Team Building Session" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Team Building Session</p>
+                </div>
+
+                <!-- Image 4 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="/Public/Image/bendu cole 13.jpg" 
+                         alt="Academic Achievement" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Academic Achievement</p>
+                </div>
+
+                <!-- Image 5 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="./Public/Image/bendu cole 2.jpg" 
+                         alt="Volunteering Work" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
+                </div>
+                
+                <!-- Image 6 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="./Public/Image/bendu cole 1.jpg" 
+                         alt="Volunteering Work" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
+                </div>
+                
+                <!-- Image 7 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="./Public/Image/bendu cole 4.jpg" 
+                         alt="Volunteering Work" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
+                </div>
+                
+                <!-- Image 8 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="./Public/Image/bendu cole 5.jpg" 
+                         alt="Volunteering Work" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
+                </div>
+                
+                <!-- Image 9 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="./Public/Image/bendu cole 6.jpg" 
+                         alt="Volunteering Work" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
+                </div>
+                 <!-- Image 10 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="https://placehold.co/600x480/5D3B6A/F7A9B8?text=Certificates+Display" 
+                         alt="Certificates Display" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Certificates Display</p>
+                </div>
+                 <!-- Image 10 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="https://placehold.co/600x480/5D3B6A/F7A9B8?text=Certificates+Display" 
+                         alt="Certificates Display" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Certificates Display</p>
+                </div>
+                 <!-- Image 10 (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
+                    <img src="https://placehold.co/600x480/5D3B6A/F7A9B8?text=Certificates+Display" 
+                         alt="Certificates Display" 
+                         class="w-full h-80 object-cover"
+                    >
+                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Certificates Display</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 6. Contact Section (Now Section 6) -->
+    <section id="contact" class="py-20 md:py-32 bg-white">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-16 text-hr-primary">Get In Touch</h2>
+            
+            <div class="bg-hr-secondary p-8 rounded-xl shadow-xl space-y-6">
+                <p class="text-lg text-hr-primary">I am actively seeking opportunities to apply my HR knowledge and skills. Please feel free to reach out to discuss how I can contribute to your team's success.</p>
+                
+                <!-- NEW: Social Media Links -->
+                <div class="flex justify-center space-x-6 pb-4">
+                    <!-- Facebook -->
+                    <a href="https://web.facebook.com/bendu.cole.1/about" target="_blank" class="text-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-110" aria-label="Facebook Profile">
+                        <!-- Facebook Icon SVG -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 11h2v-3h-2v-2c0-1.543.864-2.32 2.385-2.32h.615v-3h-2.15c-3.13 0-5.25 1.603-5.25 4.885v2.433h-2v3h2v11h4v-11h2.5l.5-3h-3v-2.433c0-.853.376-1.39.885-1.39h.615z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/weedorbcole_?igsh=dmQyenJyeWVpcXh4" target="_blank" class="text-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-110" aria-label="Instagram Profile">
+                        <!-- Instagram Icon SVG -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4 3h-8c-2.21 0-4 1.79-4 4v8c0 2.21 1.79 4 4 4h8c2.21 0 4-1.79 4-4V9c0-2.21-1.79-4-4-4zm0 2.5a.5.5 0 100 1h-8a.5.5 0 000-1h8zm-4 4a4 4 0 100 8 4 4 0 000-8z"/>
+                            <circle cx="12" cy="12" r="3.5" fill="white"/>
+                            <path fill="currentColor" d="M17.5 7.5a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/weedor-b-cole-632a27271/" target="_blank" class="text-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-110" aria-label="LinkedIn Profile">
+                        <!-- LinkedIn Icon SVG -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.629c0-1.391-.027-3.187-1.939-3.187-1.942 0-2.23 1.517-2.23 3.091v5.725h-3.554V9.293h3.419v1.579h.048c.477-.903 1.638-1.938 3.37-1.938 3.601 0 4.267 2.373 4.267 5.454v6.064zM5.277 7.828a2.593 2.593 0 01-2.591-2.593c0-1.428 1.164-2.594 2.591-2.594 1.427 0 2.592 1.166 2.592 2.594 0 1.43-1.165 2.593-2.592 2.593zM6.945 20.452H3.553V9.293h3.392v11.159z"/>
+                        </svg>
+                    </a>
+                </div>
+                <!-- END NEW: Social Media Links -->
+                
+                <div class="space-y-4">
+                    
+                    <!-- Email -->
+                    <div class="flex items-center justify-center space-x-3">
+                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:cole67280@gmail.com" class="text-lg text-hr-primary font-medium hover:underline">cole67280@gmail.com</a>
+                    </div>
+                    
+                    <!-- Phone 1 -->
+                    <div class="flex items-center justify-center space-x-3">
+                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-11a2 2 0 01-2-2v-11z"></path></svg>
+                        <span class="text-lg text-hr-primary font-medium">+231 88 639 8342</span>
+                    </div>
+
+                     <!-- Phone 2 -->
+                    <div class="flex items-center justify-center space-x-3">
+                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-11a2 2 0 01-2-2v-11z"></path></svg>
+                        <span class="text-lg text-hr-primary font-medium">+231 77 030 9564</span>
+                    </div>
+
+                    <!-- Location -->
+                     <div class="flex items-center justify-center space-x-3">
+                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span class="text-lg text-hr-primary font-medium">Monrovia, Paynesville, Liberia</span>
+                    </div>
+                </div>
+                
+                <!-- Call to Action Buttons Container -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-6">
+                    
+                    <!-- 1. Download Resume Button (Existing) -->
+                    <a href="./Public/DOC/Weeder B Cole (Resume) 1.pdf" download class="inline-block px-8 py-3 bg-hr-primary text-white font-bold rounded-full shadow-lg hover:bg-hr-accent hover:text-hr-primary transition duration-300 transform hover:scale-105">
+                        Download Resume
+                    </a>
+                    
+                    <!-- 2. Send Email Button (Existing) -->
+                    <a href="mailto:cole67280@gmail.com" class="inline-block px-8 py-3 bg-hr-accent text-white font-bold rounded-full shadow-lg hover:bg-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-105">
+                        Send Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-hr-primary text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm opacity-80">
+            <p>&copy; 2025 Weeder B. Cole HR Portfolio. Built with professionalism and strategic intent.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/231886398342" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center bg-hr-accent text-white font-bold py-3 pl-4 pr-5 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 hover:shadow-hr-accent/70 group">
+        <!-- WhatsApp Icon SVG -->
+        <svg class="w-7 h-7 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.04 2C7.34 2 3.42 5.92 3.42 10.61c0 1.76.53 3.45 1.54 4.9L3.18 20.31l5.06-1.33c1.37.74 2.92 1.12 4.02 1.12h.01c4.7 0 8.62-3.92 8.62-8.61C20.66 5.92 16.74 2 12.04 2zm.01 1.75c4.01 0 7.29 3.28 7.29 7.29 0 4.01-3.28 7.29-7.29 7.29h-.01c-1.17 0-2.34-.33-3.35-.98l-.24-.14-2.51.66.67-2.45-.16-.25c-.69-1.07-1.07-2.31-1.07-3.63 0-4.01 3.28-7.29 7.29-7.29zm-3.48 4.67c-.2-.01-.41-.01-.62.03-.31.06-.69.45-.82.6-.13.15-.31.3-.47.45-.16.15-.34.33-.51.52-.46.54-.92 1.09-1.25 1.75-.42.85-.72 1.76-.89 2.44-.06.27.05.6.14.77.09.18.2.3.36.46.16.16.32.37.49.56.17.2.38.29.61.37.23.08.5.07.72.03.22-.05.52-.16.8-.29.61-.27 1.25-.63 1.91-1.03 1.56-.98 2.9-2.28 3.94-3.56.26-.32.49-.6.63-.84.15-.24.23-.42.27-.64.04-.22.02-.4-.05-.6-.07-.2-.23-.48-.5-.73-.27-.26-.45-.44-.65-.62-.2-.18-.46-.35-.74-.48-.28-.13-.57-.2-.84-.23z"/>
+        </svg>
+        <!-- Contrasting Label (Hidden on mobile, shown on md screens) -->
+        <span class="hidden md:inline-block">WhatsApp Me</span>
+    </a>
+    
+
+    <!-- JavaScript for Navbar Functionality -->
+    <script>
+        // Toggle mobile menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu after clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Sticky header class toggle on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('header-fixed');
+            } else {
+                navbar.classList.remove('header-fixed');
+            }
+        });
+
+        // Initialize header class on load
+        window.onload = function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('header-fixed');
+            } else {
+                 navbar.classList.add('header-fixed'); // Start with the fixed style for aesthetic
+            }
+        };
+    </script>
+</body>
+</html>
