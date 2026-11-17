@@ -1,566 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weeder B. Cole | HR Professional Portfolio</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind - UPDATED FEMININE COLOR PALETTE -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Refined Feminine Palette
-                        'hr-primary': '#5D3B6A', // Deep Plum/Berry (Main professional base color)
-                        'hr-secondary': '#E3D5E6', // Soft Lavender (Muted secondary background/subtle tone)
-                        'hr-accent': '#F7A9B8', // Dusty Rose Pink (Elegant accent color - unchanged)
-                        'hr-bg-light': '#F7F9FB', // Light gray/off-white background
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom scroll behavior for smooth navigation */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Style for the fixed header */
-        .header-fixed {
-            /* Background color matches the new Deep Plum */
-            background-color: rgba(93, 59, 106, 0.95); 
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-     <!-- FAVICON LINK: -->
-     <link href="/favicon.ico" rel="icon">
-    <!-- END FAVICON LINKS -->
-    <!-- Load Inter font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weedor B. Cole | HR Professional Portfolio</title>
+<meta name="description" content="Weedor B. Cole: BBA in Management graduate (AMEU, 2026) seeking entry-level human resource and administrative roles in Monrovia, Liberia.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{'hr-primary':'#5D3B6A','hr-secondary':'#E3D5E6','hr-accent':'#F7A9B8','hr-bg-light':'#F7F9FB'},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
+<style>html{scroll-behavior:smooth;scroll-padding-top:5rem}.header-fixed{background-color:rgba(93,59,106,.95);backdrop-filter:blur(5px);box-shadow:0 4px 6px rgba(0,0,0,.1)}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}a:focus-visible,button:focus-visible{outline:3px solid #F7A9B8;outline-offset:2px}</style>
+<link href="/favicon.ico" rel="icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
 </head>
 <body class="bg-hr-bg-light font-sans text-gray-800">
+<header id="navbar" class="header-fixed fixed top-0 left-0 right-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+<a href="#home" class="text-2xl font-extrabold tracking-wider text-white hover:text-hr-accent transition">WBC.HR</a>
+<nav class="hidden md:flex space-x-8"><a href="#about" class="text-white hover:text-hr-accent transition font-medium">About</a><a href="#skills" class="text-white hover:text-hr-accent transition font-medium">Skills</a><a href="#education" class="text-white hover:text-hr-accent transition font-medium">Education</a><a href="#projects" class="text-white hover:text-hr-accent transition font-medium">Experience</a><a href="#gallery" class="text-white hover:text-hr-accent transition font-medium">Gallery</a><a href="#contact" class="text-white hover:text-hr-accent transition font-medium">Contact</a></nav>
+<button id="mobile-menu-button" class="md:hidden text-white" aria-label="Open menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg></button></div>
+<div id="mobile-menu" class="hidden md:hidden bg-hr-primary/95"><nav class="px-2 pt-2 pb-3 space-y-1"><a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">About</a><a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Skills</a><a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Education</a><a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Experience</a><a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Gallery</a><a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Contact</a></nav></div></header>
 
-    <!-- Sticky Header/Navigation -->
-    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            
-            <!-- Logo: SVG Icon + Text -->
-            <a href="#home" class="flex items-center space-x-2 text-white group">
-                <!-- Stylized Human Resources Icon (Represents Profile/People Management) in accent color -->
-                <svg class="w-7 h-7 fill-current text-hr-accent transition duration-300 group-hover:text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                </svg>
-                <span class="text-2xl font-extrabold tracking-wider transition duration-300 group-hover:text-hr-accent">WBC.HR</span>
-            </a>
-            <!-- END NEW LOGO -->
+<section id="home" class="bg-hr-primary text-white pt-32 pb-24 md:pt-48 md:pb-36"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<img src="./Public/Image/graduation-5.jpg" alt="Weedor B. Cole in graduation regalia" class="w-40 h-40 rounded-full mx-auto mb-8 object-cover object-top border-4 border-white shadow-xl">
+<h1 class="text-5xl md:text-7xl font-extrabold mb-4">Weedor B. Cole</h1>
+<p class="text-xl md:text-2xl font-light mb-2 text-hr-accent">BBA in Management Graduate</p>
+<p class="text-lg mb-8">Aspiring Human Resource Professional</p>
+<p id="about" class="max-w-3xl mx-auto text-lg leading-relaxed">Recent graduate of African Methodist Episcopal University (Bachelor of Business Administration in Management, minor in Accounting, November 2026), seeking an entry-level human resource or administrative role, or an internship. Trained in interviewing, personal branding, and workplace readiness, with coursework in human resource management, organizational behavior, and manpower planning. Committed to employee engagement, process improvement, and a positive workplace culture, with a record of good conduct recognized by school and church awards.</p>
+<a href="#contact" class="inline-block mt-8 px-8 py-3 bg-hr-accent text-hr-primary font-bold rounded-full shadow-lg hover:bg-white transition">Get in touch</a></div></section>
 
-            <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-white hover:text-hr-accent transition duration-300 font-medium">About</a>
-                <a href="#skills" class="text-white hover:text-hr-accent transition duration-300 font-medium">Skills</a>
-                <a href="#education" class="text-white hover:text-hr-accent transition duration-300 font-medium">Education</a>
-                <a href="#projects" class="text-white hover:text-hr-accent transition duration-300 font-medium">Experience</a>
-                <a href="#gallery" class="text-white hover:text-hr-accent transition duration-300 font-medium">Gallery</a> <!-- ADDED GALLERY LINK -->
-                <a href="#contact" class="text-white hover:text-hr-accent transition duration-300 font-medium">Contact</a>
-            </nav>
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-hr-primary/95">
-            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">About</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Skills</a>
-                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Education</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Experience</a>
-                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Gallery</a> <!-- ADDED GALLERY LINK -->
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-hr-secondary/50">Contact</a>
-            </nav>
-        </div>
-    </header>
+<section id="skills" class="py-20 md:py-32 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Core HR Competencies</h2><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="bg-hr-bg-light p-6 rounded-xl shadow-lg border-t-4 border-hr-accent"><h3 class="text-xl font-semibold mb-3 text-hr-primary">Strategic Thinking</h3><p class="text-gray-600">Aligning HR initiatives such as staffing and development with organizational goals and future needs.</p></div><div class="bg-hr-bg-light p-6 rounded-xl shadow-lg border-t-4 border-hr-accent"><h3 class="text-xl font-semibold mb-3 text-hr-primary">Analytical Skills</h3><p class="text-gray-600">A foundation in collecting and interpreting HR data (turnover, engagement) to support informed decisions.</p></div><div class="bg-hr-bg-light p-6 rounded-xl shadow-lg border-t-4 border-hr-accent"><h3 class="text-xl font-semibold mb-3 text-hr-primary">Communication & Interpersonal</h3><p class="text-gray-600">Clear verbal and written communication for employee relations, training delivery, and policy clarity.</p></div><div class="bg-hr-bg-light p-6 rounded-xl shadow-lg border-t-4 border-hr-accent"><h3 class="text-xl font-semibold mb-3 text-hr-primary">Organizational Skills</h3><p class="text-gray-600">Managing documentation, improving processes, and keeping accurate personnel records.</p></div><div class="bg-hr-bg-light p-6 rounded-xl shadow-lg border-t-4 border-hr-accent"><h3 class="text-xl font-semibold mb-3 text-hr-primary">Interviewing & Branding</h3><p class="text-gray-600">Trained in job interview techniques, professional resume writing, and personal branding.</p></div><div class="bg-hr-bg-light p-6 rounded-xl shadow-lg border-t-4 border-hr-accent"><h3 class="text-xl font-semibold mb-3 text-hr-primary">Technology (Microsoft Office)</h3><p class="text-gray-600">Proficient in Microsoft Office Suite for reporting, presentations, and data management.</p></div></div></div></section>
 
-    
-    <!-- 1. Hero Section -->
-    <section id="home" class="bg-hr-primary text-white pt-32 pb-24 md:pt-48 md:pb-36">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <!-- Profile Picture Placeholder -->
-            <img src="./Public/Image/bendu cole pf.jpg" 
-                 alt="Weeder B. Cole Profile Photo" 
-                 class="w-40 h-40 rounded-full mx-auto mb-8 object-cover border-4 border-white shadow-xl transform transition duration-500 hover:scale-105"
-            >
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fadeIn">
-                Weeder B. Cole
-            </h1>
-            <p class="text-xl md:text-2xl font-light mb-8 text-hr-accent">
-                Aspiring Human Resource Professional
-            </p>
-            <!-- UPDATED OBJECTIVE -->
-            <p id="about" class="max-w-3xl mx-auto text-lg leading-relaxed">
-                Aspiring Human Resource Professional with a foundation in HR principles and verified ethical conduct (Recipient of a Certificate of Honor). Seeking to apply skills in employee engagement and process optimization to drive organizational success. Proven to be dedicated, hardworking, and compliant with a strong commitment to continuous improvement and a positive workplace culture.
-            </p>
-        </div>
-    </section>
-   
-    <!-- 2. Skills Section -->
-    <section id="skills" class="py-20 md:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Core HR Competencies</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Skill Card 1: Strategic Thinking -->
-                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
-                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Strategic Thinking</h3>
-                    <p class="text-gray-600">Ability to align HR initiatives (like staffing and development) with the broader organizational goals and future needs.</p>
-                </div>
+<section id="education" class="py-20 md:py-32 bg-hr-secondary"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"><h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Academic Background &amp; Training</h2><div class="space-y-10"><div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl"><div class="md:w-1/3 mb-4 md:mb-0"><p class="text-lg font-bold text-hr-primary">November 11, 2026</p><p class="text-sm font-semibold text-green-700 mt-1">Graduated</p></div><div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6"><h3 class="text-2xl font-semibold mb-1 text-gray-900">Bachelor of Business Administration (BBA) in Management</h3><p class="text-xl text-hr-primary mb-2">Minor: Accounting | College of Business &amp; Public Administration</p><p class="text-gray-600">African Methodist Episcopal University (AMEU). Completed 135 credit hours over nine semesters. Coursework includes Human Resource Management, Organizational Behavior, Manpower Planning and Development, Managerial Psychology, and Wages/Salary Administration.</p><a href="./Public/Image/Weedor_B_Cole_BBA_Degree_Certificate.jpg" target="_blank" rel="noopener" class="inline-block mt-4 px-6 py-2 bg-hr-primary text-white font-bold rounded-full shadow-lg hover:bg-hr-accent hover:text-hr-primary transition">View Degree Certificate</a></div></div><div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl"><div class="md:w-1/3 mb-4 md:mb-0"><p class="text-lg font-bold text-hr-primary">June 2026</p></div><div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6"><h3 class="text-2xl font-semibold mb-1 text-gray-900">MoniTrack Business Associate Program (MBAP)</h3><p class="text-xl text-hr-primary mb-2">Certificate of Completion</p><p class="text-gray-600">MoniTrack: workplace readiness, digital tools, business operations, and professional communication.</p></div></div><div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl"><div class="md:w-1/3 mb-4 md:mb-0"><p class="text-lg font-bold text-hr-primary">Dec 2, 2025</p></div><div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6"><h3 class="text-2xl font-semibold mb-1 text-gray-900">Career Development Training Seminar</h3><p class="text-xl text-hr-primary mb-2">Certificate of Participation</p><p class="text-gray-600">AMEU Management Department: interviewing, resume writing, and personal branding.</p></div></div><div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl"><div class="md:w-1/3 mb-4 md:mb-0"><p class="text-lg font-bold text-hr-primary">2025</p></div><div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6"><h3 class="text-2xl font-semibold mb-1 text-gray-900">West African Senior School Certificate Examination (WASSCE)</h3><p class="text-xl text-hr-primary mb-2">Private candidate | Passed</p><p class="text-gray-600">English Language, Literature-in-English, Geography, and Biology.</p></div></div><div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl"><div class="md:w-1/3 mb-4 md:mb-0"><p class="text-lg font-bold text-hr-primary">Nov 20, 2022</p></div><div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6"><h3 class="text-2xl font-semibold mb-1 text-gray-900">Certificate of Partnership Participation</h3><p class="text-xl text-hr-primary mb-2">Outstanding Performance in Ministry Year</p><p class="text-gray-600">Higher Life Embassy Church</p></div></div><div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl"><div class="md:w-1/3 mb-4 md:mb-0"><p class="text-lg font-bold text-hr-primary">Graduated 2022</p></div><div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6"><h3 class="text-2xl font-semibold mb-1 text-gray-900">High School Diploma</h3><p class="text-xl text-hr-primary mb-2">Certificate of Honor Recipient</p><p class="text-gray-600">Royal Christian Foundation Institute</p><a href="./Public/DOC/Weedor_B_Cole_Notarized_HS_Credentials.pdf" target="_blank" rel="noopener" class="inline-block mt-4 px-6 py-2 bg-hr-primary text-white font-bold rounded-full shadow-lg hover:bg-hr-accent hover:text-hr-primary transition">View Credentials</a></div></div><div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl"><div class="md:w-1/3 mb-4 md:mb-0"><p class="text-lg font-bold text-hr-primary">Oct 2019 - Mar 2020</p></div><div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6"><h3 class="text-2xl font-semibold mb-1 text-gray-900">Foundation School Certificate</h3><p class="text-xl text-hr-primary mb-2">Certificate of Completion</p><p class="text-gray-600">Higher Life Embassy</p></div></div></div></div></section>
 
-                <!-- Skill Card 2: Analytical Skills -->
-                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
-                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Analytical Skills</h3>
-                    <p class="text-gray-600">A foundation in collecting, analyzing, and interpreting HR data (e.g., turnover, engagement scores) to drive informed decision-making.</p>
-                </div>
+<section id="projects" class="py-20 md:py-32 bg-hr-primary text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><h2 class="text-4xl font-bold text-center mb-16 text-hr-accent">Experience &amp; HR Case Studies</h2>
+<p class="text-center text-lg max-w-4xl mx-auto mb-12 opacity-90">Hands-on business ownership alongside conceptual HR case studies that show my business sense and strategic thinking.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl"><h3 class="text-2xl font-bold mb-1 text-hr-primary">Entrepreneur &amp; Founder</h3><p class="text-sm font-semibold text-hr-primary/70 mb-4">Weedor Quality Human Hairs | Self-employed, Jan 2024 - Present, Monrovia, Liberia</p>
+<ul class="list-disc ml-5 space-y-1 text-gray-700"><li>Founded and manage all aspects of a small business, building <strong>project management and organizational skills</strong>.</li><li>Developed strategies for <strong>customer engagement</strong> and community impact.</li><li>Encouraged <strong>creativity and collaboration</strong> among team members.</li><li>Aligned daily operations with long-term goals, a core <strong>strategic thinking</strong> practice.</li></ul></div>
+<div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl"><h3 class="text-2xl font-bold mb-1 text-hr-primary">Reducing Time-to-Hire</h3><p class="text-sm font-semibold text-hr-primary/70 mb-4">Talent Acquisition & Process Optimization</p><p><strong>Situation:</strong> A high time-to-hire was leaving critical roles vacant.</p><p class="mt-2"><strong>Action plan:</strong> Mapped the recruitment process, found the bottleneck at the interview stage, and proposed a three-stage process with standardized assessment rubrics.</p><p class="mt-2"><strong>Projected outcome:</strong> A projected 25% reduction in time-to-hire and a better applicant experience.</p></div><div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl"><h3 class="text-2xl font-bold mb-1 text-hr-primary">Implementing Continuous Feedback</h3><p class="text-sm font-semibold text-hr-primary/70 mb-4">Performance Management & Development</p><p><strong>Situation:</strong> The annual review was ineffective and disconnected from daily performance.</p><p class="mt-2"><strong>Action plan:</strong> Designed quarterly check-ins focused on career development, with coaching and feedback training for managers.</p><p class="mt-2"><strong>Projected outcome:</strong> A culture of continuous development and better goal alignment across teams.</p></div><div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl"><h3 class="text-2xl font-bold mb-1 text-hr-primary">Stay Interview Initiative</h3><p class="text-sm font-semibold text-hr-primary/70 mb-4">Employee Engagement & Retention</p><p><strong>Situation:</strong> Unidentified dissatisfaction was driving voluntary resignations.</p><p class="mt-2"><strong>Action plan:</strong> Designed a pilot stay-interview program to learn what keeps employees, focusing on career pathing and recognition.</p><p class="mt-2"><strong>Projected outcome:</strong> Actionable data for retention strategies and more trust between management and staff.</p></div><div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl"><h3 class="text-2xl font-bold mb-1 text-hr-primary">Remote Work Policy Drafting</h3><p class="text-sm font-semibold text-hr-primary/70 mb-4">Policy Development & Compliance</p><p><strong>Situation:</strong> A clear, compliant policy was needed for flexible and remote work.</p><p class="mt-2"><strong>Action plan:</strong> Researched legal requirements and best practices to draft a policy covering eligibility, security, and communication standards.</p><p class="mt-2"><strong>Projected outcome:</strong> Clarity for all employees, legal compliance, and support for work-life balance.</p></div></div>
+<p class="text-center text-sm mt-8 opacity-80">The four case studies are academic, conceptual exercises. Their outcomes are projected, not results from a real workplace.</p></div></section>
 
-                <!-- Skill Card 3: Communication & Interpersonal -->
-                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
-                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Communication & Interpersonal</h3>
-                    <p class="text-gray-600">Strong verbal and written communication essential for employee relations, training delivery, and policy clarity.</p>
-                </div>
+<section id="gallery" class="py-20 md:py-32 bg-hr-secondary"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Gallery &amp; Highlights</h2><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"><a href="https://web.facebook.com/people/Weedor-Quality-Human-Hairs/100070183251625/?sk=about" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/logo.jpg" alt="Weedor Quality Human Hairs logo" loading="lazy" class="w-full h-80 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x480/5D3B6A/F7A9B8?text=Weedor+Quality+Human+Hairs';"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Entrepreneur &amp; Founder</p></a><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/graduation-5.jpg" alt="Graduation portrait, AMEU Class of 2026" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Graduation portrait, AMEU Class of 2026</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/graduation-1.jpg" alt="Graduation Day, AMEU Class of 2026" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Graduation Day, AMEU Class of 2026</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/graduation-3.jpg" alt="Graduation portrait in cap and gown" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Graduation portrait in cap and gown</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/graduation-2.jpg" alt="Celebrating graduation" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Celebrating graduation</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/graduation-4.jpg" alt="Graduation photo shoot" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Graduation photo shoot</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/Weedor_B_Cole_BBA_Degree_Certificate.jpg" alt="BBA in Management Degree Certificate" loading="lazy" class="w-full h-80 object-contain bg-white"><p class="text-center p-2 text-hr-primary font-semibold text-sm">BBA in Management Degree Certificate</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/bendu cole 5.jpg" alt="Leadership Event" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Leadership Event</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/bendu cole 8.jpg" alt="Team Building Session" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Team Building Session</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/bendu cole 2.jpg" alt="Volunteering Work" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Volunteering Work</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/bendu cole 1.jpg" alt="Volunteering Work" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Volunteering Work</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/bendu cole 4.jpg" alt="Volunteering Work" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Volunteering Work</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/bendu cole 6.jpg" alt="Volunteering Work" loading="lazy" class="w-full h-80 object-cover"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Volunteering Work</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/Weedor B. Cole (documents)/Certificate Of Participation( Higher Life Embassy).png" alt="Partnership Recognition (Service & Team Execution)" loading="lazy" class="w-full h-80 object-contain bg-white"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Partnership Recognition (Service &amp; Team Execution)</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/Weedor B. Cole (documents)/Certificate Of Participation.png" alt="Career Development Training" loading="lazy" class="w-full h-80 object-contain bg-white"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Career Development Training</p></div><div class="rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white"><img src="./Public/Image/Weedor B. Cole (documents)/certificate of honor(Royal Christian Foundation Institute).png" alt="Certificate of Honor: Outstanding Conduct" loading="lazy" class="w-full h-80 object-contain bg-white"><p class="text-center p-2 text-hr-primary font-semibold text-sm">Certificate of Honor: Outstanding Conduct</p></div></div></div></section>
 
-                <!-- Skill Card 4: Organizational Skills -->
-                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
-                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Organizational Skills</h3>
-                    <p class="text-gray-600">Proficiency in managing complex documentation, process optimization, and maintaining accurate personnel records.</p>
-                </div>
-                
-                <!-- Skill Card 5: Job Interviewing & Branding (New Skill) -->
-                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
-                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Interviewing & Branding</h3>
-                    <p class="text-gray-600">Training in effective job interview techniques, professional resume writing, and personal branding for career success.</p>
-                </div>
+<section id="contact" class="py-20 md:py-32 bg-white"><div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h2 class="text-4xl font-bold mb-16 text-hr-primary">Get In Touch</h2>
+<div class="bg-hr-secondary p-8 rounded-xl shadow-xl space-y-6"><p class="text-lg text-hr-primary">I am actively seeking opportunities to apply my HR knowledge and skills. Please reach out to discuss how I can contribute to your team.</p>
+<div class="flex justify-center space-x-6 pb-4 text-hr-primary font-semibold">
+<a href="https://www.linkedin.com/in/weedor-b-cole-632a27271/" target="_blank" rel="noopener" class="hover:text-hr-accent">LinkedIn</a>
+<a href="https://web.facebook.com/bendu.cole.1/about" target="_blank" rel="noopener" class="hover:text-hr-accent">Facebook</a>
+<a href="https://www.instagram.com/weedorbcole_?igsh=dmQyenJyeWVpcXh4" target="_blank" rel="noopener" class="hover:text-hr-accent">Instagram</a></div>
+<div class="space-y-4 text-lg text-hr-primary font-medium">
+<div class="flex items-center justify-center space-x-3"><a href="mailto:cole67280@gmail.com" class="hover:underline">cole67280@gmail.com</a></div>
+<div class="flex items-center justify-center space-x-3"><svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-11a2 2 0 01-2-2v-11z"/></svg><span>+231 88 639 8342</span></div>
+<div class="flex items-center justify-center space-x-3"><svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-11a2 2 0 01-2-2v-11z"/></svg><span>+231 77 030 9564</span></div>
+<div class="flex items-center justify-center space-x-3"><span>Monrovia, Paynesville, Liberia</span></div></div>
+<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-6">
+<a href="./Public/DOC/Weedor_B_Cole_Resume.pdf" download class="inline-block px-8 py-3 bg-hr-primary text-white font-bold rounded-full shadow-lg hover:bg-hr-accent hover:text-hr-primary transition">Download Resume</a>
+<a href="mailto:cole67280@gmail.com" class="inline-block px-8 py-3 bg-hr-accent text-hr-primary font-bold rounded-full shadow-lg hover:bg-hr-primary hover:text-hr-accent transition">Send Email</a></div></div></div></section>
 
-                <!-- Skill Card 6: Technology (Microsoft Suite) -->
-                <div class="bg-hr-bg-light p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-[1.02] border-t-4 border-hr-accent">
-                    <h3 class="text-xl font-semibold mb-3 text-hr-primary">Technology (Microsoft Suite)</h3>
-                    <p class="text-gray-600">Highly proficient in Microsoft Office Suite for reporting, presentation, and data management tasks.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- 3. Education Section -->
-    <section id="education" class="py-20 md:py-32 bg-hr-secondary">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Academic Background & Training</h2>
-            
-            <div class="space-y-10">
-               <!-- University -->
-                <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="md:w-1/3 mb-4 md:mb-0">
-                        <p class="text-lg font-bold text-hr-primary">August 2026</p>
-                        <p class="text-sm font-semibold text-green-600 mt-1">Cleared for Graduation</p>
-                    </div>
-                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
-                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">Bachelor's Degree, Management</h3>
-                        <p class="text-xl text-hr-primary mb-2">College of Business & Public Administration</p>
-                        <p class="text-gray-600">African Methodist Episcopal University (AMEU)</p>
-                        <p class="text-sm text-gray-500 mt-2 italic">Successfully completed all academic requirements for graduation.</p>
-                    </div>
-                </div>
-
-                <!-- Career Development Seminar -->
-                 <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="md:w-1/3 mb-4 md:mb-0">
-                        <p class="text-lg font-bold text-hr-primary">Dec 2, 2025</p>
-                    </div>
-                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
-                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">Career Development Training Seminar</h3>
-                        <p class="text-xl text-hr-primary mb-2">Certificate of Participation</p>
-                        <p class="text-gray-600">AMEU Management Department (Focused on Interviewing, Resume Writing, and Personal Branding).</p>
-                    </div>
-                </div>
-
-                <!-- NEW: MoniTrack MBAP -->
-                 <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="md:w-1/3 mb-4 md:mb-0">
-                        <p class="text-lg font-bold text-hr-primary">June 13, 2025</p>
-                    </div>
-                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
-                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">MoniTrack Business Associate Program (MBAP)</h3>
-                        <p class="text-xl text-hr-primary mb-2">Certificate of Completion</p>
-                        <p class="text-gray-600">MoniTrack (Competence in workplace readiness, digital tools, business operations, and professional communication).</p>
-                    </div>
-                </div>
-
-                <!-- Partnership Participation -->
-                <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="md:w-1/3 mb-4 md:mb-0">
-                        <p class="text-lg font-bold text-hr-primary">Nov 20, 2022</p>
-                    </div>
-                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
-                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">Certificate of Partnership Participation</h3>
-                        <p class="text-xl text-hr-primary mb-2">Outstanding Performance in Ministry Year</p>
-                        <p class="text-gray-600">Higher Life Embassy Church</p>
-                    </div>
-                </div>
-
-                <!-- High School -->
-                <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="md:w-1/3 mb-4 md:mb-0">
-                        <p class="text-lg font-bold text-hr-primary">Graduated 2021/2022</p>
-                    </div>
-                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
-                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">High School Diploma</h3>
-                        <p class="text-xl text-hr-primary mb-2">Certificate of Honor Recipient</p>
-                        <p class="text-gray-600">Royal Christian Foundation Institute</p>
-                        <!-- View/Download Credentials Button -->
-                        <a href="./Public/DOC/Weedor_B_Cole_Notarized_HS_Credentials.pdf.pdf" target="_blank" class="inline-block mt-4 px-6 py-2 bg-hr-primary text-white font-bold rounded-full shadow-lg hover:bg-hr-accent hover:text-hr-primary transition duration-300 transform hover:scale-105">
-                            View Credentials
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Foundation School -->
-                <div class="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="md:w-1/3 mb-4 md:mb-0">
-                        <p class="text-lg font-bold text-hr-primary">Oct 2019 - Mar 2020</p>
-                    </div>
-                    <div class="md:w-2/3 border-l-4 border-hr-accent md:pl-6">
-                        <h3 class="text-2xl font-semibold mb-1 text-gray-900">Foundation School Certificate</h3>
-                        <p class="text-xl text-hr-primary mb-2">Certificate of Completion</p>
-                        <p class="text-gray-600">Higher Life Embassy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- 4. Experience & Competencies Section -->
-    <section id="projects" class="py-20 md:py-32 bg-hr-primary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-hr-accent">Professional Experience & HR Competencies</h2>
-            <p class="text-center text-lg max-w-4xl mx-auto mb-12 opacity-90">
-                Combining practical business ownership with conceptual HR case studies showcases strong leadership, business acumen, and applied strategic thinking.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- UPDATED: Entrepreneurial Experience (Hands-on Leadership) -->
-                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
-                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Entrepreneur & Founder</h3>
-                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Weedor Quality Human Hairs | Business Strategy & Culture</p>
-                    
-                    <strong class="font-bold">Role:</strong> Self-employed (Jan 2024 - Present) in Monrovia, Liberia.<br>
-                    <ul class="list-disc list-inside ml-4 mt-2 space-y-1 text-gray-700">
-                        <li>Founded and managed all aspects of a small business, demonstrating end-to-end **project management and organizational skills**.</li>
-                        <li>Developed innovative strategies for **customer engagement** and community impact, parallel to external HR communications.</li>
-                        <li>Fostered a culture of **creativity and collaboration** among team members to drive business success and internal motivation.</li>
-                        <li>Engaged in strategic planning, aligning daily operations with long-term vision—a key HR **strategic thinking** function.</li>
-                    </ul>
-                </div>
-                
-                <!-- Project 1: Talent Acquisition & Metrics -->
-                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
-                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Reducing Time-to-Hire</h3>
-                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Talent Acquisition & Process Optimization</p>
-                    
-                    <strong class="font-bold">Situation:</strong> A high Time-to-Hire (TTH) was causing critical roles to remain vacant, impacting productivity.<br>
-                    <strong class="font-plan">Action Plan:</strong> Mapped the recruitment process, identified a bottleneck at the interview stage, and proposed a streamlined, three-stage process with standardized assessment rubrics.<br>
-                    <strong class="font-bold">Result:</strong> Projected TTH reduction by **25%** by improving organizational efficiency and applicant experience.
-                </div>
-
-                <!-- Project 2: Performance Management -->
-                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
-                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Implementing Continuous Feedback</h3>
-                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Performance Management & Employee Development</p>
-                    
-                    <strong class="font-bold">Situation:</strong> The annual review system was ineffective and disconnected from daily performance and growth.<br>
-                    <strong class="font-bold">Action Plan:</strong> Designed a framework for quarterly 'Check-ins' focusing on career development and provided managers with training on effective coaching and constructive feedback techniques.<br>
-                    <strong class="font-bold">Result:</strong> Fosters a culture of continuous development and **improves goal alignment** across teams.
-                </div>
-                
-                <!-- Project 3: Employee Relations & Retention -->
-                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
-                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Stay Interview Initiative</h3>
-                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Employee Engagement & Retention</p>
-                    
-                    <strong class="font-bold">Situation:</strong> Unidentified dissatisfaction was leading to voluntary resignations (high attrition rate).<br>
-                    <strong class="font-bold">Action Plan:</strong> Developed and piloted a "Stay Interview" program to proactively identify what motivates employees to *stay*, focusing on career pathing and recognition.<br>
-                    <strong class="font-bold">Result:</strong> Collects actionable data to inform retention strategies and **builds trust** between management and staff.
-                </div>
-
-                <!-- Project 4: Policy & Compliance -->
-                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-hr-accent/50 transition duration-500">
-                    <h3 class="text-2xl font-bold mb-3 text-hr-primary">Case Study: Remote Work Policy Drafting</h3>
-                    <p class="text-sm font-semibold text-hr-accent uppercase mb-4">Policy Development & Legal Compliance</p>
-                    
-                    <strong class="font-bold">Situation:</strong> Need for a clear, legally compliant policy to govern flexible/remote work post-pandemic.<br>
-                    <strong class="font-bold">Action Plan:</strong> Researched legal mandates and industry best practices to draft a comprehensive policy addressing eligibility, security, and communication standards.<br>
-                    <strong class="font-bold">Result:</strong> Provides clarity to all employees, ensuring **legal compliance** while supporting work-life balance.
-                </div>
-
-            </div>
-        </div>
-    </section>
-    
-    <!-- 5. Gallery Section (NEW) -->
-    <section id="gallery" class="py-20 md:py-32 bg-hr-secondary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-hr-primary">Visual Gallery & Highlights</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                    <!-- Image 1 (Entrepreneur & Founder Logo) - Now a clickable link -->
-                <a href="https://web.facebook.com/people/Weedor-Quality-Human-Hairs/100070183251625/?sk=about" target="_blank" class="block rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white group">
-                    <img src="./Public/Image/logo.jpg" alt="Weedor Quality Human Hairs Logo" 
-                         class="w-full h-80 object-cover" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/600x480/5D3B6A/F7A9B8?text=Weedor+Quality+Human+Hairs';" 
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm group-hover:bg-hr-accent group-hover:text-white transition duration-300">Entrepreneur & Founder</p>
-                </a>
-
-
-                <!-- Image 2 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/bendu cole 5.jpg" 
-                         alt="Leadership Event" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Leadership Event</p>
-                </div>
-                
-                <!-- Image 3 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/bendu cole 8.jpg" 
-                         alt="Team Building Session" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Team Building Session</p>
-                </div>
-
-                <!-- Image 4 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/Weeder B Cole IMAGE.jpeg" 
-                         alt="Academic Achievement" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Academic Achievement</p>
-                </div>
-
-                <!-- Image 5 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/bendu cole 2.jpg" 
-                         alt="Volunteering Work" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
-                </div>
-                
-                <!-- Image 6 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/bendu cole 1.jpg" 
-                         alt="Volunteering Work" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
-                </div>
-                
-                <!-- Image 7 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/bendu cole 4.jpg" 
-                         alt="Volunteering Work" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
-                </div>
-                
-                <!-- Image 8 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/Weeder B Cole IMAGE.jpeg" 
-                         alt="Volunteering Work" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
-                </div>
-                
-                <!-- Image 9 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/bendu cole 6.jpg" 
-                         alt="Volunteering Work" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Volunteering Work</p>
-                </div>
-                 <!-- Image 10 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/Weedor B. Cole (documents)/Certificate Of Participation( Higher Life Embassy).png" 
-                         alt="Certificates Display" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Partnership Recognition (Service & Team Execution)</p>
-                </div>
-                 <!-- Image 10 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/Weedor B. Cole (documents)/Certificate Of Participation.png" 
-                         alt="Certificates Display" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Career Development Training</p>
-                </div>
-                 <!-- Image 10 (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.03] border-4 border-white">
-                    <img src="./Public/Image/Weedor B. Cole (documents)/certificate of honor(Royal Christian Foundation Institute).png" 
-                         alt="Certificates Display" 
-                         class="w-full h-80 object-cover"
-                    >
-                    <p class="text-center p-2 bg-white text-hr-primary font-semibold text-sm">Certificate of Honor: Outstanding Conduct</p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-    <!-- 6. Contact Section (Now Section 6) -->
-    <section id="contact" class="py-20 md:py-32 bg-white">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold mb-16 text-hr-primary">Get In Touch</h2>
-            
-            <div class="bg-hr-secondary p-8 rounded-xl shadow-xl space-y-6">
-                <p class="text-lg text-hr-primary">I am actively seeking opportunities to apply my HR knowledge and skills. Please feel free to reach out to discuss how I can contribute to your team's success.</p>
-                
-                <!-- NEW: Social Media Links -->
-                <div class="flex justify-center space-x-6 pb-4">
-                    <!-- Facebook -->
-                    <a href="https://web.facebook.com/bendu.cole.1/about" target="_blank" class="text-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-110" aria-label="Facebook Profile">
-                        <!-- Facebook Icon SVG -->
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 11h2v-3h-2v-2c0-1.543.864-2.32 2.385-2.32h.615v-3h-2.15c-3.13 0-5.25 1.603-5.25 4.885v2.433h-2v3h2v11h4v-11h2.5l.5-3h-3v-2.433c0-.853.376-1.39.885-1.39h.615z"/>
-                        </svg>
-                    </a>
-                    
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/weedorbcole_?igsh=dmQyenJyeWVpcXh4" target="_blank" class="text-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-110" aria-label="Instagram Profile">
-                        <!-- Instagram Icon SVG -->
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4 3h-8c-2.21 0-4 1.79-4 4v8c0 2.21 1.79 4 4 4h8c2.21 0 4-1.79 4-4V9c0-2.21-1.79-4-4-4zm0 2.5a.5.5 0 100 1h-8a.5.5 0 000-1h8zm-4 4a4 4 0 100 8 4 4 0 000-8z"/>
-                            <circle cx="12" cy="12" r="3.5" fill="white"/>
-                            <path fill="currentColor" d="M17.5 7.5a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"/>
-                        </svg>
-                    </a>
-                    
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/weedor-b-cole-632a27271/" target="_blank" class="text-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-110" aria-label="LinkedIn Profile">
-                        <!-- LinkedIn Icon SVG -->
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.447 20.452h-3.554v-5.629c0-1.391-.027-3.187-1.939-3.187-1.942 0-2.23 1.517-2.23 3.091v5.725h-3.554V9.293h3.419v1.579h.048c.477-.903 1.638-1.938 3.37-1.938 3.601 0 4.267 2.373 4.267 5.454v6.064zM5.277 7.828a2.593 2.593 0 01-2.591-2.593c0-1.428 1.164-2.594 2.591-2.594 1.427 0 2.592 1.166 2.592 2.594 0 1.43-1.165 2.593-2.592 2.593zM6.945 20.452H3.553V9.293h3.392v11.159z"/>
-                        </svg>
-                    </a>
-                </div>
-                <!-- END NEW: Social Media Links -->
-                
-                <div class="space-y-4">
-                    
-                    <!-- Email -->
-                    <div class="flex items-center justify-center space-x-3">
-                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <a href="mailto:cole67280@gmail.com" class="text-lg text-hr-primary font-medium hover:underline">cole67280@gmail.com</a>
-                    </div>
-                    
-                    <!-- Phone 1 -->
-                    <div class="flex items-center justify-center space-x-3">
-                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-11a2 2 0 01-2-2v-11z"></path></svg>
-                        <span class="text-lg text-hr-primary font-medium">+231 88 639 8342</span>
-                    </div>
-
-                     <!-- Phone 2 -->
-                    <div class="flex items-center justify-center space-x-3">
-                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-11a2 2 0 01-2-2v-11z"></path></svg>
-                        <span class="text-lg text-hr-primary font-medium">+231 77 030 9564</span>
-                    </div>
-
-                    <!-- Location -->
-                     <div class="flex items-center justify-center space-x-3">
-                        <svg class="w-6 h-6 text-hr-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <span class="text-lg text-hr-primary font-medium">Monrovia, Paynesville, Liberia</span>
-                    </div>
-                </div>
-                
-                <!-- Call to Action Buttons Container -->
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-6">
-                    
-                    <!-- 1. Download Resume Button (Existing) -->
-                    <a href="./Public/DOC/Weeder B Cole (Resume) 1.pdf" download class="inline-block px-8 py-3 bg-hr-primary text-white font-bold rounded-full shadow-lg hover:bg-hr-accent hover:text-hr-primary transition duration-300 transform hover:scale-105">
-                        Download Resume
-                    </a>
-                    
-                    <!-- 2. Send Email Button (Existing) -->
-                    <a href="mailto:cole67280@gmail.com" class="inline-block px-8 py-3 bg-hr-accent text-white font-bold rounded-full shadow-lg hover:bg-hr-primary hover:text-hr-accent transition duration-300 transform hover:scale-105">
-                        Send Email
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-hr-primary text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm opacity-80">
-            <p>&copy; 2025 Weeder B. Cole HR Portfolio. Built with professionalism and strategic intent.</p>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/231886398342" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center bg-hr-accent text-white font-bold py-3 pl-4 pr-5 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 hover:shadow-hr-accent/70 group">
-        <!-- WhatsApp Icon SVG -->
-        <svg class="w-7 h-7 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12.04 2C7.34 2 3.42 5.92 3.42 10.61c0 1.76.53 3.45 1.54 4.9L3.18 20.31l5.06-1.33c1.37.74 2.92 1.12 4.02 1.12h.01c4.7 0 8.62-3.92 8.62-8.61C20.66 5.92 16.74 2 12.04 2zm.01 1.75c4.01 0 7.29 3.28 7.29 7.29 0 4.01-3.28 7.29-7.29 7.29h-.01c-1.17 0-2.34-.33-3.35-.98l-.24-.14-2.51.66.67-2.45-.16-.25c-.69-1.07-1.07-2.31-1.07-3.63 0-4.01 3.28-7.29 7.29-7.29zm-3.48 4.67c-.2-.01-.41-.01-.62.03-.31.06-.69.45-.82.6-.13.15-.31.3-.47.45-.16.15-.34.33-.51.52-.46.54-.92 1.09-1.25 1.75-.42.85-.72 1.76-.89 2.44-.06.27.05.6.14.77.09.18.2.3.36.46.16.16.32.37.49.56.17.2.38.29.61.37.23.08.5.07.72.03.22-.05.52-.16.8-.29.61-.27 1.25-.63 1.91-1.03 1.56-.98 2.9-2.28 3.94-3.56.26-.32.49-.6.63-.84.15-.24.23-.42.27-.64.04-.22.02-.4-.05-.6-.07-.2-.23-.48-.5-.73-.27-.26-.45-.44-.65-.62-.2-.18-.46-.35-.74-.48-.28-.13-.57-.2-.84-.23z"/>
-        </svg>
-        <!-- Contrasting Label (Hidden on mobile, shown on md screens) -->
-        <span class="hidden md:inline-block">WhatsApp Me</span>
-    </a>
-    
-
-    <!-- JavaScript for Navbar Functionality -->
-    <script>
-        // Toggle mobile menu
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // Hide mobile menu after clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(item => {
-            item.addEventListener('click', function() {
-                document.getElementById('mobile-menu').classList.add('hidden');
-            });
-        });
-
-        // Sticky header class toggle on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('header-fixed');
-            } else {
-                navbar.classList.remove('header-fixed');
-            }
-        });
-
-        // Initialize header class on load
-        window.onload = function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('header-fixed');
-            } else {
-                 navbar.classList.add('header-fixed'); // Start with the fixed style for aesthetic
-            }
-        };
-    </script>
-</body>
-</html>
+<footer class="bg-hr-primary text-white py-8"><div class="max-w-7xl mx-auto px-4 text-center text-sm opacity-80"><p>&copy; 2026 Weedor B. Cole. All rights reserved.</p></div></footer>
+<a href="https://wa.me/231886398342" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-hr-accent text-hr-primary font-bold py-3 px-5 rounded-full shadow-2xl hover:scale-105 transition">WhatsApp Me</a>
+<script>
+const m=document.getElementById('mobile-menu');
+document.getElementById('mobile-menu-button').addEventListener('click',()=>m.classList.toggle('hidden'));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.add('hidden')));
+</script></body></html>
